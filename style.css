@@ -1,1 +1,47 @@
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 30px;
+}
 
+/* STEO 1: Define animation sequence*/
+@keyframes colorchange {
+    from {background-color: lightblue;}
+    to {background-color: lightcoral;}
+}
+
+/* STEP 2: Configure animation*/
+#animated-box {
+    animation-name: colorchange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Improve animations by adding more frames (points in the sequence) */
+@keyframes colorchangesmooth {
+    0% {background-color: lightblue;}
+    50% {background-color: lightcoral;}
+    100% {background-color: lightblue;}
+}
+
+#animated-emoji {
+    font-size: 40px;
+    animation-name: emoji;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes emoji {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+        transform: translate(30px,30px)
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
