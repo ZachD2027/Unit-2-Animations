@@ -25,23 +25,29 @@
     100% {background-color: lightblue;}
 }
 
-#animated-emoji {
-    font-size: 40px;
-    animation-name: emoji;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes emoji {
+@keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(0deg); 
     }
-    50% {
-        transform: rotate(180deg);
-        transform: translate(30px,30px)
+    50% { 
+        transform: rotate(180deg) scale(20); 
     }
     100% {
         transform: rotate(360deg);
     }
+}
+
+#animated-emoji {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    font-size: 40px;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: aquamarine;
+
+}
+
 }
